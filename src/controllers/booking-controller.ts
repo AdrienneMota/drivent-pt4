@@ -10,13 +10,10 @@ export async function getBooking(req: AuthenticatedRequest, res: Response) {
 
         return res.status(httpStatus.OK).json(booking);
     } catch (error) {
-      if(error.name === "NotFoundError"){
-        return res.sendStatus(httpStatus.NOT_FOUND); 
-      }
       if(error.name === "CannotListHotelsError"){
         return res.sendStatus(httpStatus.PAYMENT_REQUIRED)
       }
-      return res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
+      return res.sendStatus(httpStatus.NOT_FOUND)
     }
 }
 
@@ -29,17 +26,14 @@ export async function createBooking(req: AuthenticatedRequest, res: Response) {
 
     return res.status(httpStatus.OK).send(bookingId);
   } catch (error) {
-    if(error.name === "NotFoundError"){
-      return res.sendStatus(httpStatus.NOT_FOUND); 
-    }
     if(error.name === "CannotListHotelsError"){
       return res.sendStatus(httpStatus.PAYMENT_REQUIRED)
     }
     if(error.name === "noVacanciesError"){
       return res.sendStatus(httpStatus.FORBIDDEN)
     }
-    return res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
-  }
+    return res.sendStatus(httpStatus.NOT_FOUND)
+}
 }
 
 export async function updateBooking(req: AuthenticatedRequest, res: Response) {
@@ -51,15 +45,12 @@ export async function updateBooking(req: AuthenticatedRequest, res: Response) {
 
     return res.status(httpStatus.OK).send(bookingId);
   } catch (error) {
-    if(error.name === "NotFoundError"){
-      return res.sendStatus(httpStatus.NOT_FOUND); 
-    }
     if(error.name === "CannotListHotelsError"){
       return res.sendStatus(httpStatus.PAYMENT_REQUIRED)
     }
     if(error.name === "noVacanciesError"){
       return res.sendStatus(httpStatus.FORBIDDEN)
     }
-    return res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);
+    return res.sendStatus(httpStatus.NOT_FOUND)
   }
 }

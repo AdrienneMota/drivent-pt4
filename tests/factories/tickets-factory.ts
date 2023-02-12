@@ -1,6 +1,6 @@
 import faker from "@faker-js/faker";
 import { prisma } from "@/config";
-import { TicketStatus } from "@prisma/client";
+import { TicketStatus, TicketType } from "@prisma/client";
 
 export async function createTicketType() {
   return prisma.ticketType.create({
@@ -41,6 +41,17 @@ export async function createTicket(enrollmentId: number, ticketTypeId: number, s
       enrollmentId,
       ticketTypeId,
       status,
+    },
+  });
+}
+
+export async function updateTicketType(ticketType: TicketType) {
+  return prisma.ticketType.update({
+    where: {
+      id: ticketType.id,
+    },
+    data: {
+      ...ticketType
     },
   });
 }

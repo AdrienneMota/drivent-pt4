@@ -1,7 +1,6 @@
-import hotelRepository from "@/repositories/hotel-repository";
 import enrollmentRepository from "@/repositories/enrollment-repository";
 import ticketRepository from "@/repositories/ticket-repository";
-import { notFoundError } from "@/errors";
+import { notFoundError, noVacanciesError } from "@/errors";
 import { cannotListHotelsError } from "@/errors/cannot-list-hotels-error";
 import bookingRepository from "@/repositories/booking-repository";
 
@@ -23,28 +22,66 @@ async function getBooking(userId: number) {
   await validateTicketBooking(userId);
 
   const booking = await bookingRepository.findByUserId(userId);
+  
+  if(!booking){
+    throw notFoundError();
+  }
+
   return {
     id: booking.id,
     Room: booking.Room
   };
+
 }
 
 async function createBooking(userId: number, roomId: number) {
   await validateTicketBooking(userId);
+  
+  
+  const room = await bookingRepository.findById(roomId);
+  if(!room){
+    throw notFoundError()
+  }
+  
   const countBooking = await bookingRepository.countByRoomId(roomId)
   console.log(countBooking)
-  const room = await bookingRepository.findById(roomId);
+  
   if(countBooking[0]._count < room.capacity){
-    //erro 403
+    throw noVacanciesError()
   }  
-  const booking = await bookingRepository.createBooking(userId, roomId);
+  
+  const newBooking = { userId, roomId}
+  const booking = await bookingRepository.createBooking(newBooking);
+
+  return booking.id;
+}
+
+async function updateBooking(userId: number, roomId: number) {
+  await validateTicketBooking(userId);
+  const bookingExist = await bookingService.getBooking(userId)
+  if(!bookingExist){
+    throw notFoundError()
+  }
+  
+  const room = await bookingRepository.findById(roomId);
+  if(!room){
+    throw notFoundError()
+  }
+
+  const countBooking = await bookingRepository.countByRoomId(roomId)
+  console.log(countBooking)
+  if(countBooking[0]._count >= room.capacity){
+    throw noVacanciesError()
+  }  
+  const booking = await bookingRepository.updateBooking(bookingExist.id, roomId);
 
   return booking.id;
 }
 
 const bookingService = {
   getBooking,
-  createBooking
+  createBooking,
+  updateBooking
 };
 
 export default bookingService;

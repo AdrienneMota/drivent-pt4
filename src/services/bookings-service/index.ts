@@ -38,6 +38,7 @@ async function createBooking(userId: number, roomId: number) {
   await validateTicketBooking(userId);
     
   const room = await bookingRepository.findById(roomId);
+  console.log(room)
   if(!room){
     throw notFoundError()
   }
@@ -54,9 +55,9 @@ async function createBooking(userId: number, roomId: number) {
   return booking.id;
 }
 
-async function updateBooking(userId: number, roomId: number) {
+async function updateBooking(userId: number, bookingId: number, roomId: number) {
   await validateTicketBooking(userId);
-  const bookingExist = await bookingService.getBooking(userId)
+  const bookingExist = await bookingRepository.findBookingById(bookingId)
   if(!bookingExist){
     throw notFoundError()
   }
@@ -66,12 +67,11 @@ async function updateBooking(userId: number, roomId: number) {
     throw notFoundError()
   }
 
-  const countBooking = await bookingRepository.countByRoomId(roomId)
-  console.log(countBooking)
+  const countBooking = await bookingRepository.countByRoomId(room.id)
   if(countBooking[0]._count >= room.capacity){
     throw noVacanciesError()
   }  
-  const booking = await bookingRepository.updateBooking(bookingExist.id, roomId);
+  const booking = await bookingRepository.updateBooking(bookingExist.id, room.id);
 
   return booking.id;
 }

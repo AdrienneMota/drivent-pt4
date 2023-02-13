@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676255156022" clover="3.2.0">
-  <project timestamp="1676255156022" name="All files">
-    <metrics statements="619" coveredstatements="559" conditionals="86" coveredconditionals="58" methods="100" coveredmethods="89" elements="805" coveredelements="706" complexity="0" loc="619" ncloc="619" packages="26" files="64" classes="64"/>
+<coverage generated="1676315727340" clover="3.2.0">
+  <project timestamp="1676315727340" name="All files">
+    <metrics statements="621" coveredstatements="584" conditionals="86" coveredconditionals="62" methods="101" coveredmethods="93" elements="808" coveredelements="739" complexity="0" loc="621" ncloc="621" packages="26" files="64" classes="64"/>
     <package name="src">
       <metrics statements="23" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="app.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/app.ts">
@@ -60,7 +60,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="155" coveredstatements="140" conditionals="19" coveredconditionals="15" methods="16" coveredmethods="15"/>
+      <metrics statements="156" coveredstatements="151" conditionals="19" coveredconditionals="17" methods="16" coveredmethods="16"/>
       <file name="authentication-controller.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="11" type="stmt"/>
@@ -73,7 +73,7 @@
         <line num="12" count="2" type="stmt"/>
       </file>
       <file name="booking-controller.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/controllers/booking-controller.ts">
-        <metrics statements="32" coveredstatements="22" conditionals="5" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <metrics statements="33" coveredstatements="33" conditionals="5" coveredconditionals="5" methods="3" coveredmethods="3"/>
         <line num="2" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
@@ -96,16 +96,17 @@
         <line num="33" count="1" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
         <line num="39" count="11" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="48" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="51" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="45" count="9" type="stmt"/>
+        <line num="46" count="9" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="53" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/controllers/enrollments-controller.ts">
         <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -254,7 +255,7 @@
       <file name="cannot-list-hotels-error.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/errors/cannot-list-hotels-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
+        <line num="4" count="14" type="stmt"/>
       </file>
       <file name="conflict-error.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/errors/conflict-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -285,12 +286,12 @@
       <file name="no-vacancies.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/errors/no-vacancies.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
       <file name="not-found-error.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/errors/not-found-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="15" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
       </file>
       <file name="request-error.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/errors/request-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -300,7 +301,7 @@
       <file name="unauthorized-error.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/errors/unauthorized-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="35" type="stmt"/>
+        <line num="4" count="38" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
@@ -312,18 +313,18 @@
         <line num="5" count="11" type="stmt"/>
         <line num="6" count="11" type="stmt"/>
         <line num="8" count="11" type="stmt"/>
-        <line num="9" count="84" type="stmt"/>
-        <line num="10" count="84" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="73" type="stmt"/>
-        <line num="13" count="73" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="73" type="stmt"/>
-        <line num="16" count="73" type="stmt"/>
-        <line num="18" count="62" type="stmt"/>
-        <line num="23" count="62" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="51" type="stmt"/>
-        <line num="27" count="51" type="stmt"/>
-        <line num="29" count="11" type="stmt"/>
-        <line num="34" count="33" type="stmt"/>
+        <line num="9" count="96" type="stmt"/>
+        <line num="10" count="96" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="84" type="stmt"/>
+        <line num="13" count="84" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="84" type="stmt"/>
+        <line num="16" count="84" type="stmt"/>
+        <line num="18" count="72" type="stmt"/>
+        <line num="23" count="72" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="60" type="stmt"/>
+        <line num="27" count="60" type="stmt"/>
+        <line num="29" count="12" type="stmt"/>
+        <line num="34" count="36" type="stmt"/>
       </file>
       <file name="error-handling-middleware.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/middlewares/error-handling-middleware.ts">
         <metrics statements="14" coveredstatements="2" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -374,17 +375,18 @@
       </file>
     </package>
     <package name="src.repositories.booking-repository">
-      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="index.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/repositories/booking-repository/index.ts">
-        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="1" count="11" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="50" count="11" type="stmt"/>
-        <line num="58" count="11" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="56" count="11" type="stmt"/>
+        <line num="65" count="11" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.enrollment-repository">
@@ -392,7 +394,7 @@
       <file name="index.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/repositories/enrollment-repository/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="11" type="stmt"/>
-        <line num="5" count="32" type="stmt"/>
+        <line num="5" count="41" type="stmt"/>
         <line num="14" count="6" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
         <line num="36" count="11" type="stmt"/>
@@ -450,7 +452,7 @@
         <line num="5" count="2" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
         <line num="19" count="3" type="stmt"/>
-        <line num="30" count="24" type="stmt"/>
+        <line num="30" count="32" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
         <line num="49" count="3" type="stmt"/>
         <line num="61" count="11" type="stmt"/>
@@ -645,20 +647,20 @@
       </file>
     </package>
     <package name="src.services.bookings-service">
-      <metrics statements="41" coveredstatements="28" conditionals="12" coveredconditionals="9" methods="4" coveredmethods="3"/>
+      <metrics statements="41" coveredstatements="40" conditionals="12" coveredconditionals="11" methods="4" coveredmethods="4"/>
       <file name="index.ts" path="/home/adrienne/Área de Trabalho/CURSO DRIVEN/SIMULAÇÃO DE MERCADO/DRIVENT/drivent-pt4/src/services/bookings-service/index.ts">
-        <metrics statements="41" coveredstatements="28" conditionals="12" coveredconditionals="9" methods="4" coveredmethods="3"/>
+        <metrics statements="41" coveredstatements="40" conditionals="12" coveredconditionals="11" methods="4" coveredmethods="4"/>
         <line num="1" count="11" type="stmt"/>
         <line num="2" count="11" type="stmt"/>
         <line num="3" count="11" type="stmt"/>
         <line num="4" count="11" type="stmt"/>
         <line num="5" count="11" type="stmt"/>
-        <line num="9" count="15" type="stmt"/>
-        <line num="10" count="15" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="14" count="13" type="stmt"/>
-        <line num="16" count="13" type="cond" truecount="5" falsecount="0"/>
-        <line num="17" count="8" type="stmt"/>
+        <line num="9" count="24" type="stmt"/>
+        <line num="10" count="24" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="14" count="21" type="stmt"/>
+        <line num="16" count="21" type="cond" truecount="5" falsecount="0"/>
+        <line num="17" count="12" type="stmt"/>
         <line num="22" count="7" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
         <line num="26" count="2" type="cond" truecount="1" falsecount="0"/>
@@ -666,27 +668,27 @@
         <line num="30" count="1" type="stmt"/>
         <line num="38" count="8" type="stmt"/>
         <line num="40" count="3" type="stmt"/>
-        <line num="41" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-        <line num="47" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="48" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="71" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="59" count="9" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="61" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="66" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="71" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
         <line num="79" count="11" type="stmt"/>
         <line num="85" count="11" type="stmt"/>
       </file>

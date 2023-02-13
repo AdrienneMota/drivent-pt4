@@ -38,7 +38,7 @@ async function createBooking(userId: number, roomId: number) {
   await validateTicketBooking(userId);
     
   const room = await bookingRepository.findById(roomId);
-  console.log(room)
+
   if(!room){
     throw notFoundError()
   }

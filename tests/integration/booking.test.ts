@@ -226,7 +226,7 @@ describe("post/booking/", () => {
             const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID)
             const payment = await createPayment(ticket.id, ticketType.price)
             const hotel = await createHotel()
-            const roomId = faker.random.numeric
+            const roomId = 0
     
             const response = await server.post("/booking/")
                 .set("Authorization", `Bearer ${token}`)
@@ -372,7 +372,7 @@ describe("update/booking/", () => {
                 const payment = await createPayment(ticket.id, ticketType.price)
                 const hotel = await createHotel()
                 const room = await createRoomWithHotelId(hotel.id)
-                const bookingId = faker.random.numeric
+                const bookingId = 0
     
             const response = await server.put(`/booking/${bookingId}`)
                 .set("Authorization", `Bearer ${token}`)
@@ -414,7 +414,6 @@ describe("update/booking/", () => {
             const oldbooking = await createBooking(user.id, oldRoom.id)
             //new room for booking
             const newRoom = await createRoomWithHotelIdWithoutCapacity(hotel.id)
-            console.log(newRoom)
             //a booking
             const booking = await createBooking(user.id, newRoom.id)
     

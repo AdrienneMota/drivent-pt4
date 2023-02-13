@@ -24,7 +24,7 @@ export async function createBooking(req: AuthenticatedRequest, res: Response) {
   try {
     const bookingId = await bookingService.createBooking(userId, roomId);
 
-    return res.status(httpStatus.OK).send(bookingId);
+    return res.status(httpStatus.OK).json({ id: bookingId});
   } catch (error) {
     if(error.name === "CannotListHotelsError"){
       return res.sendStatus(httpStatus.PAYMENT_REQUIRED)
@@ -43,7 +43,7 @@ export async function updateBooking(req: AuthenticatedRequest, res: Response) {
   try {
     const bookingId = await bookingService.updateBooking(userId, roomId);
 
-    return res.status(httpStatus.OK).send(bookingId);
+    return res.status(httpStatus.OK).json({ id: bookingId});
   } catch (error) {
     if(error.name === "CannotListHotelsError"){
       return res.sendStatus(httpStatus.PAYMENT_REQUIRED)

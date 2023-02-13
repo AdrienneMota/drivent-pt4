@@ -36,17 +36,15 @@ async function getBooking(userId: number) {
 
 async function createBooking(userId: number, roomId: number) {
   await validateTicketBooking(userId);
-  
-  
+    
   const room = await bookingRepository.findById(roomId);
   if(!room){
     throw notFoundError()
   }
   
   const countBooking = await bookingRepository.countByRoomId(roomId)
-  console.log(countBooking)
   
-  if(countBooking[0]._count < room.capacity){
+  if(countBooking[0]._count >= room.capacity){
     throw noVacanciesError()
   }  
   
